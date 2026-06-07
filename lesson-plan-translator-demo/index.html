@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyflow | Voice-First Lesson Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">Polyflow</div>
+            <div class="status-indicator">Online</div>
+        </header>
+
+        <main id="main-content">
+            <!-- Dynamic Content Injected Here -->
+            <div class="hero-section">
+                <h1>What's the plan today?</h1>
+                <p>Speak, scan, or upload your lesson plan.</p>
+            </div>
+
+            <div class="interaction-container">
+                <div id="voice-orb" class="voice-orb idle">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="core"></div>
+                </div>
+                <div id="voice-transcript" class="transcript-preview"></div>
+            </div>
+
+            <div class="input-actions">
+                <button class="action-btn" id="btn-camera">
+                    <span class="icon">📷</span>
+                    <span>Scan</span>
+                </button>
+                <button class="action-btn" id="btn-upload">
+                    <span class="icon">📂</span>
+                    <span>Upload</span>
+                </button>
+                <button class="action-btn" id="btn-paste">
+                    <span class="icon">📋</span>
+                    <span>Paste</span>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="nav-hint">Tap to start speaking</div>
+        </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Flashcards | Instant Feedback</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="persona-badge" id="persona-label">Clinical Specialist: Dr. Mateo</div>
+            <p style="font-size: 0.75rem; opacity: 0.5;">SESSIONS: 12 / STREAK: 5</p>
+        </header>
+
+        <main class="flashcard-container">
+            <h1 class="target-phrase" id="target-phrase">Ki kote doulè a ye?</h1>
+            
+            <div class="orb-wrapper">
+                <div class="orb-glow"></div>
+                <div id="voice-orb" class="voice-orb"></div>
+            </div>
+
+            <div id="audio-controls" class="audio-controls">
+                <button id="btn-replay" class="control-btn">
+                    <span>↺</span> Replay
+                </button>
+                <button id="btn-slow" class="control-btn">
+                    <span>🐢</span> Slow
+                </button>
+            </div>
+
+            <div id="feedback-container" class="feedback-container">
+                <div id="score-value" class="score-value">--%</div>
+                <div class="score-label">Intelligibility Score</div>
+                <div id="ai-tip" class="ai-tip"></div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p id="hint-text" class="hint-text">Tap the orb to start the stimulus</p>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
