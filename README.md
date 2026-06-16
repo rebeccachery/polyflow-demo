@@ -29,6 +29,58 @@ Transforms structured lesson plans into simplified, learner-friendly formats and
 * Supports different learning levels and contexts
 * Useful for tutors, educators, and self-learners
 
+## Running the Demos
+
+Both demos are standalone prototypes. They run locally in your browser and do not require API keys or backend services.
+
+### Prerequisites
+
+- A modern browser (Chrome, Firefox, Safari, or Edge)
+- [Node.js](https://nodejs.org/) 18+ (Lesson Plan Translator only)
+- Microphone access for voice interactions (Flashcard Echo)
+
+### Flashcard Echo
+
+The flashcard demo is a static site—no build step or dependencies.
+
+```bash
+cd flashcard-demo
+python3 -m http.server 8080
+```
+
+Then open [http://localhost:8080](http://localhost:8080) in your browser.
+
+If you do not have Python installed, you can use any static file server instead:
+
+```bash
+cd flashcard-demo
+npx serve .
+```
+
+Click the voice orb to hear a phrase, respond aloud, and receive instant feedback. Use **Replay** and **Slow** to hear the prompt again at different speeds.
+
+### Lesson Plan Translator
+
+The lesson plan demo uses [Vite](https://vite.dev/) for local development.
+
+```bash
+cd lesson-plan-translator-demo
+npm install
+npm run dev
+```
+
+Vite prints a local URL (typically [http://localhost:5173](http://localhost:5173)). Open it in your browser.
+
+- Tap the voice orb to simulate a spoken lesson-plan request.
+- Tap the camera button to simulate scanning a document.
+
+To build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
 ## Vision
 These demos explore early building blocks of a larger system focused on:
 * AI-assisted learning workflows
